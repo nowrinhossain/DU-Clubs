@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Dhaka University Society Hub</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" href="{{url_for('static',filename='view_books.css')}}">
+
+<link rel="stylesheet" href="{{url_for('static',filename= 'layout.css')}}"/>
+
+<script src="{{url_for('static', filename='view_book.js')}}"></script>
+
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+
+
+
+
+</head>
+<body>
+<!--  Free CSS Templates from www.templatemo.com -->
+<div id="templatemo_container">
+
+    <div class="bgded overlay" style="background-image:url('images/demo/backgrounds/01.png');">
+
+	<div class="wrapper row1">
+    <header id="header" class="hoc clear">
+      <!-- ################################################################################################ -->
+      <div id="logo" class="fl_left">
+        <h1><a href="index.html">Dhaka University Society Hub</a></h1>
+      </div>
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+
+
+          <li class="active"><a href="all_clubs.html">DU clubs</a></li>
+          <li><a href="create_class">Create Club</a></li>
+            <li><a href="/">Sign Out</a></li>
+
+        </ul>
+      </nav>
+      <!-- ################################################################################################ -->
+    </header>
+  </div>
+  </div>
+
+    <div class="info_box">
+            <h1>{{club_info.name}}</h1>
+
+
+            <p>{{club_info.location}}</p>
+
+            <p>{{club_info.description}}</p>
+
+            <div class="cleaner_with_height">&nbsp;</div>
+
+            <button class="btn">
+
+                <a href="member_request_form?club={{club_info.name}}">Member Join Open</a>
+
+            </button>
+
+
+    </div>
+
+
+
+
+
+    <div class="cleaner_with_height">&nbsp;</div>
+
+
+
+
+
+    <div id="templatemo_content">
+
+            <div class="cleaner_with_height">&nbsp;</div>
+
+
+
+                {% for each in all_posts %}
+
+                <div class="templatemo_product_box">
+
+                    <h1>{{each.name}}</h1>
+
+                    <p>
+                       Time: {{each.time}}
+                    </p>
+
+                    <div class="product_info">
+                        <p>{{each.post}}</p>
+                    </div>
+
+                    <img src="{{each[0]}}"  class="img" height="150px" width="130px"/>
+
+
+
+                </div>
+                {% endfor %}
+
+
+
+    </div> <!-- end of content -->
+
+    <!-- end of footer -->
+<!--  Free CSS Template www.templatemo.com -->
+</div> <!-- end of container -->
+<!-- templatemo 086 book store -->
+<!--
+Book Store Template
+http://www.templatemo.com/preview/templatemo_086_book_store
+-->
+
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+<script src="layout/scripts/jquery.fitvids.js"></script>
+
+</body>
+</html>

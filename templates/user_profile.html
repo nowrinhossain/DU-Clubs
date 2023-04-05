@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Profile</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<link rel="stylesheet" href="{{url_for('static',filename= 'layout.css')}}"/>
+<link rel="stylesheet" href="{{url_for('static',filename='user_profile.css')}}">
+
+
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+
+<style>
+  article, aside, figure, footer, header, hgroup,
+  menu, nav, section { display: block; }
+</style>
+
+    <script type="text/javascript">
+
+
+         function readURL(input) {
+             if (input.files[0]) {
+                 var reader = new FileReader();
+
+                 reader.onload = function (e) {
+                     $('#blah')
+                         .attr('src', e.target.result)
+                         .width(150)
+                         .height(200);
+                 };
+
+                 reader.readAsDataURL(input.files[0]);
+             }
+         }
+
+
+
+
+
+    </script>
+
+</head>
+<body>
+<!--  Free CSS Templates from www.templatemo.com -->
+<div id="templatemo_container">
+        <div class="bgded overlay" style="background-image:url('images/demo/backgrounds/01.png');">
+
+	<div class="wrapper row1">
+    <header id="header" class="hoc clear">
+      <!-- ################################################################################################ -->
+      <div id="logo" class="fl_left">
+        <h1><a href="index.html">Dhaka University Society Hub</a></h1>
+      </div>
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li ><a href="all_clubs.html">DU clubs</a></li>
+          <li><a href="create_class">Create Club</a></li>
+          <li><a href="\">Sign out</a></li>
+
+        </ul>
+      </nav>
+      <!-- ################################################################################################ -->
+    </header>
+  </div> <!-- end of menu -->
+        </div>
+
+    <div class="cleaner_with_height">&nbsp;</div>
+
+    <div class="info_box">
+            <h1>{{club_info.name}}</h1>
+
+
+            <p>{{club_info.location}}</p>
+
+            <p>{{club_info.description}}</p>
+
+            <div class="cleaner_with_height">&nbsp;</div>
+
+
+
+    </div>
+
+
+
+    <div id="templatemo_content">
+        <div id="templatemo_content_right">
+
+
+
+            <form action="/user" method="get">
+
+            <div>
+
+
+
+            </div>
+            <div class="user_info">
+
+            </div>
+
+            </form>
+
+
+
+
+            <div class="Edit_profile_button">
+                <a href="dashboard">Member requests</a>
+            </div>
+
+
+
+
+
+        </div> <!-- end of content left -->
+
+        <div id="templatemo_content_left">
+
+
+
+           <form action="/profile" method="post" enctype="multipart/form-data">
+
+
+
+
+               <div class="dropdown_list">
+
+                   <div class="View_button">
+                    <a href="view_post?club={{club_name}}">View Post</a>
+
+                   </div>
+                   <br/>
+
+
+                   <select name="post_type" >
+                       <option value="Public">Public</option>
+                       <option value="Members">Members</option>
+                   </select>
+
+
+
+               </div>
+
+
+                <div class="book_info">
+
+                        <input type="text" id="club_post" name="club_post" placeholder="Write post..." style="height: 100px;width: 400px;vertical-align: text-top; "  ><br>
+                        <div class="cleaner_with_height"></div>
+
+
+                        <img class="img" id="blah" name="blah" src="#" alt="Add photo" align="center" />
+
+                        <br/>
+
+                        <input type='file' onchange="readURL(this);" align="left" name="image_post"/>
+
+                        <div class="cleaner_with_height"></div>
+
+                        <input type="submit" align="middle" value="Post" >
+
+                        <div class="cleaner_with_height"></div>
+
+
+
+
+                </div>
+
+            </form>
+
+
+
+
+
+
+        </div> <!-- end of content right -->
+
+    	<div class="cleaner_with_height">&nbsp;</div>
+    </div> <!-- end of content -->
+
+    <div id="templatemo_footer">
+
+	       <a href="subpage.html">Home</a> | <a href="subpage.html">Search</a> | <a href="subpage.html">Books</a> | <a href="#">New Releases</a> | <a href="#">FAQs</a> | <a href="#">Contact Us</a><br />
+        Copyright © CSEDU <a href="#"><strong>Your Company Name</strong></a>
+        <!-- Credit: www.templatemo.com -->	</div>
+    <!-- end of footer -->
+<!--  Free CSS Template www.templatemo.com -->
+</div> <!-- end of container -->
+<!-- templatemo 086 book store -->
+<!--
+Book Store Template
+http://www.templatemo.com/preview/templatemo_086_book_store
+-->
+</body>
+</html>

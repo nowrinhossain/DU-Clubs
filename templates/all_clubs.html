@@ -1,0 +1,91 @@
+<!DOCTYPE html >
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Dhaka University Society Hub</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" href="{{url_for('static',filename= 'layout.css')}}"/>
+<link rel="stylesheet" href="{{url_for('static',filename= 'all_clubs.css')}}"/>
+
+
+
+</head>
+<body>
+
+<div id="templatemo_container">
+	<div class="bgded overlay" style="background-image:url('images/demo/backgrounds/01.png');">
+
+	<div class="wrapper row1">
+    <header id="header" class="hoc clear">
+      <!-- ################################################################################################ -->
+      <div id="logo" class="fl_left">
+        <h1><a href="index.html">Dhaka University Society Hub</a></h1>
+      </div>
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li class="active" ><a href="all_clubs.html">DU clubs</a></li>
+          <li><a href="create_class">Create Club</a></li>
+          <li><a href="/">Sign Out</a></li>
+
+        </ul>
+      </nav>
+      <!-- ################################################################################################ -->
+    </header>
+  </div>
+  </div>
+  <!-- end of menu -->
+
+    <div id="templatemo_content">
+
+
+          <div id="templatemo_content_right">
+
+
+
+
+              {% for each in club_list %}
+
+            <div class="templatemo_buy_product_box">
+                <div class="cleaner">&nbsp;</div>
+
+                <h4><span>{{each.name}}</span></h4>
+                <p>{{each.description}}</p>
+                <p>{{each.location}}</p>
+                <a href="view_post?club={{each.name}}" class="btn inverse">View</a>
+
+                <!--img src="../static/{{each[5]}}" alt="image"/-->
+                <!--div class="product_info">
+                    <p>{{each[3]}}</p>
+                    <h3>BDT{{each[6]}}</h3>
+                    <div class="Buy_book"><a href="{{each[4]}}">Read</a></div>
+                </div-->
+                <div class="cleaner">&nbsp;</div>
+            </div>
+
+            {% endfor %}
+
+
+        </div> <!-- end of content right -->
+        <div class="cleaner_with_height">&nbsp;</div>
+    </div> <!-- end of content -->
+
+
+
+
+    <div id="templatemo_footer">
+
+	       <a href="../static/bookit_subpage.html">Home</a> | <a href="../static/bookit_subpage.html">Search</a> | <a href="../static/bookit_subpage.html">Books</a> | <a href="#">New Releases</a> | <a href="#">FAQs</a> | <a href="#">Contact Us</a><br />
+        Copyright © CSEDU <a href="#"><strong>Your Company Name</strong></a>
+    <!-- end of footer -->
+
+</div> <!-- end of container -->
+</div>
+
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+<script src="layout/scripts/jquery.fitvids.js"></script>
+
+
+</body>

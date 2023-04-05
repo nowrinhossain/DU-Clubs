@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dhaka University Society Hub</title>
+
+    <link rel="stylesheet" href="{{url_for('static',filename= 'layout.css')}}"/>
+
+    <link rel="stylesheet" href="{{url_for('static',filename= 'signIn_signUp.css')}}"/>
+
+
+</head>
+<body>
+
+
+<div class="wrapper row1" >
+    <header id="header" class="hoc clear">
+      <!-- ################################################################################################ -->
+      <div id="logo" class="fl_left">
+
+      <h2 class="heading">Dhaka University Society Hub</h2>
+
+      </div>
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <!--<li ><a href="all_clubs.html">DU clubs</a></li>-->
+          <!--<li><a href="signIn_signUp">Sign Up/In</a></li>-->
+          <!--<li><a href="create_class">Create Club</a></li>-->
+        </ul>
+      </nav>
+      <!-- ################################################################################################ -->
+    </header>
+  </div>
+
+
+<div class="login-wrap">
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+		<div class="login-form">
+
+            <form action="/signIn" method="post" enctype="multipart/form-data">
+
+			<div class="sign-in-htm">
+				<div class="group">
+					<label for="userMail" class="label">Email address</label>
+					<input id="userMail" name="userMail" type="email" class="input">
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Password</label>
+					<input id="pass" name="pass" type="password" class="input" data-type="password">
+				</div>
+				<div class="group">
+					<input id="check" type="checkbox" class="check" checked>
+					<label for="check"><span class="icon"></span> Keep me Signed in</label>
+				</div>
+				<div class="group">
+					<input type="submit" class="button" value="Sign In">
+				</div>
+
+				<div class="hr"></div>
+				<div class="foot-lnk">
+					<a href="#forgot">Forgot Password?</a>
+				</div>
+			</div>
+
+
+            </form>
+            <label id="msg2" class="label">{{err}}</label>
+
+
+            <form action="/signUp" method="post" enctype="multipart/form-data">
+			<div class="sign-up-htm">
+				<div class="group">
+					<label for="newuser" class="label">Username</label>
+					<input id="newuser" name="newuser" type="text" class="input">
+				</div>
+                <div class="group">
+					<label for="new_user_dept" class="label">Department</label>
+					<input id="new_user_dept" name="new_user_dept" type="text" class="input">
+				</div>
+
+                <div class="group">
+					<label for="reg_no" class="label">Dhaka University Registration No.</label>
+					<input id="reg_no" name="reg_no" type="text" class="input">
+				</div>
+
+
+                <div class="group">
+					<label for="new_user_email" class="label">Email Address</label>
+					<input id="new_user_email" name="new_user_email" type="email" class="input">
+				</div>
+
+
+				<div class="group">
+					<label for="new_user_pass" class="label">Password</label>
+					<input id="new_user_pass" name="new_user_pass" type="password" class="input" data-type="password">
+				</div>
+				<div class="group">
+					<label for="confirm_new_pass" class="label">Repeat Password</label>
+					<input id="confirm_new_pass" type="password" class="input" data-type="password" onkeyup="checkPass(); return false;">
+				</div>
+                <label id="msg" class="label"></label>
+
+
+				<div class="group">
+					<input type="submit" class="button" value="Sign Up">
+				</div>
+				<div class="hr"></div>
+				<div class="foot-lnk">
+                    <label for="tab-1">Already Member?</label>
+				</div>
+			</div>
+            </form>
+		</div>
+	</div>
+</div>
+<script  src="/static/signin_signUp.js"></script>
+
+<script language = "javascript" type = "text/javascript">
+
+function checkPass()
+{
+    var pass1 = document.getElementById('new_user_pass');
+    var pass2 = document.getElementById('confirm_new_pass');
+    var message = document.getElementById('msg');
+    var goodColor = "#66cc66";
+    var badColor = "#ff6666";
+
+    if(pass1.value.length <6 ){
+        pass1.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = " you have to enter at least 6 digit!"
+        return;
+    }else
+    {
+    }
+
+    if(pass1.value == pass2.value)
+    {
+        pass2.style.backgroundColor = goodColor;
+        message.style.color = goodColor;
+        message.innerHTML = "ok!"
+    }
+	else
+    {
+        pass2.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = " These passwords don't match"
+    }
+}
+
+
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+
+
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+
+      <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+
+
+
+
+</head>
+
+<body>
+
+  <p class="tip">Click on button in image container</p>
+
+
+<div class="cont">
+  <div class="form sign-in">
+    <h2>Welcome</h2>
+    <form action="/member_request_form"  method="post" enctype="multipart/form-data">
+              <label>
+                <input type="text" id="user" name="user" placeholder="Your name" />
+              </label>
+
+              <label>
+                <input type="text" id="reg" name="reg" placeholder="Registration No"/>
+              </label>
+
+              <label>
+                <input type="text" id="contact" name="contact" placeholder="Contact number" />
+              </label>
+
+
+              <label>
+                <input type="text" id="dept" name="dept" placeholder="Department"/>
+              </label>
+
+
+              <label>
+                <input type="number" id="year" name = "year" placeholder="Year" />
+              </label>
+
+
+              <label>
+                <input type="text" id="session" name = "session" placeholder="Session" />
+              </label>
+
+
+              <label>
+                <input type="text" id="hall_name" name="hall_name" placeholder="Attached hall" />
+              </label>
+
+
+
+
+              <button type="submit" class="submit">
+              Submit Information
+              </button>
+
+
+        </form>
+
+
+  </div>
+
+
+
+  <div class="sub-cont">
+    <div class="img">
+      <div class="img__text m--up">
+        <h2>Want to join?</h2>
+        <p>Fill up the form and discover great amount of new opportunities!</p>
+      </div>
+      <div class="img__text m--in">
+        <h2>One of us?</h2>
+        <p>If you already has an account, just sign in. We've missed you!</p>
+      </div>
+
+    </div>
+    <div class="form sign-up">
+      <h2>Time to feel like home,</h2>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+    <script  src="/static/index.js"></script>
+
+
+
+
+</body>
+
+</html>

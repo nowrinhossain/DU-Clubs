@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login/Registration Form Transition</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+
+
+      <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+
+
+  
+</head>
+
+<body>
+
+
+
+  <p class="tip">Click on button in image container</p>
+<div class="cont">
+
+  <div class="form sign-in">
+    <h2>Welcome</h2>
+    <form action="/club_reg"  method="post" enctype="multipart/form-data">
+              <label>
+                <input type="text" id="club_name" name="club_name" placeholder="Club/Society name" />
+              </label>
+
+              <label>
+                <input type="number" id="club_code" name="club_code" placeholder="6 digit club code"/>
+              </label>
+
+
+              <label>
+                <input type="text" id="club_info" name = "club_info" placeholder="Club/Society Information" />
+              </label>
+
+
+              <label>
+                <input type="text" id="location" name = "location" placeholder="Location" />
+              </label>
+
+
+              <label>
+                <input type="password" id="password" name="password" placeholder="Password" />
+              </label>
+
+              <label>
+                <input type="password" id="cpassword" name="cpassword" placeholder="Confirm Password" />
+              </label>
+
+
+
+              <button type="submit" class="submit">
+                Sign Up
+              </button>
+
+
+        </form>
+
+
+  </div>
+
+
+
+  <div class="sub-cont">
+    <div class="img">
+      <div class="img__text m--up">
+        <h2>Wanna create Club?</h2>
+        <p>Sign up and discover great amount of new opportunities for your club!</p>
+      </div>
+      <div class="img__text m--in">
+        <h2>One of us?</h2>
+        <p>If you already has an account, just sign in. We've missed you!</p>
+      </div>
+
+    </div>
+    <div class="form sign-up">
+      <h2>Time to feel like home,</h2>
+
+    </div>
+  </div>
+</div>
+
+
+  
+
+    <script  src="/static/index.js"></script>
+
+
+
+
+</body>
+
+</html>
